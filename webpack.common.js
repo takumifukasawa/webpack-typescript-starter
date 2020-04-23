@@ -76,7 +76,9 @@ module.exports = {
                         {
                             loader: 'sass-loader',
                             options: {
-                                includePaths: [ `${SRC}/scss` ],
+                                sassOptions: {
+                                    includePaths: [ `${SRC}/scss` ],
+                                },
                             },
                         }
                     ]
