@@ -19,5 +19,5 @@ $ npm i
 $ npm run dev
 
 // prod
-$ npm run prod
+$ npm run build
 ```
