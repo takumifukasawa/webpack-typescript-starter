@@ -6,13 +6,9 @@ const readConfig = require('read-config');
 const path = require('path');
 
 // base config
-const SRC = './src';
-const DEST = './public';
-const HOST = process.env.HOST || '0.0.0.0';
-const PORT = process.env.PORT || 3000;
+const constants = readConfig('./constants.yml');
 
-const constants = readConfig(`${SRC}/constants.yml`);
-const { BASE_DIR } = constants;
+const { SRC, DEST, BASE_DIR } = constants;
 
 // page/**/*.pug -> dist/**/*.html
 const htmlTemplates = routeDataMapper({
@@ -85,20 +81,9 @@ module.exports = {
                         }
                     ]
                 })
-            },
-            {
-                test: /.ya?ml$/,
-                loader: 'js-yaml-loader',
             }
         ]
     },
-    // // webpack-dev-serverの設定
-    // devServer: {
-    //     host: HOST,
-    //     port: PORT,
-    //     contentBase: DEST,
-    //     openPage: path.relative('/', BASE_DIR),
-    // },
     // キャシュ有効化
     cache: true,
     // 拡張子省略時のpath解決
