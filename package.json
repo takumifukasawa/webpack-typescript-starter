@@ -2,7 +2,7 @@
   "name": "webpack-typescript-starter",
   "version": "0.0.0",
   "description": "webpack-typescript-starter development.",
-  "author": "Kayac Inc.",
+  "author": "takumifukasawa",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
