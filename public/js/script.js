@@ -1,0 +1,1 @@
+(()=>{"use strict";var e=new function(e){this.name="world"}("world");document.querySelector(".wrapper").addEventListener("click",(function(){console.log("hello, "+e.name+".")}))})();
