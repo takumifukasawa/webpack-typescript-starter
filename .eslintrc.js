@@ -1,24 +1,42 @@
+const path = require("path");
+
 module.exports = {
-    env: {
-        browser: true,
-        es2021: true,
-    },
-    extends: [
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  overrides: [
+    {
+      files: ["**/*.ts"],
+      extends: [
         "airbnb-base",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended",
         "prettier/@typescript-eslint",
-    ],
-    parser: "@typescript-eslint/parser",
-    parserOptions: {
+      ],
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
         ecmaVersion: 12,
         sourceType: "module",
-        tsconfigRootDir: __dirname,
-        project: ["./tsconfig.json"],
+        // tsconfigRootDir: __dirname,
+        // project: ["./tsconfig.json"],
+      },
+      plugins: ["@typescript-eslint"],
+      rules: {
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            ts: "never",
+          },
+        ],
+      },
+      settings: {
+        // "import/resolver": "webpack",
+        "import/resolver": {
+          webpack: { config: path.join(__dirname, "webpack.common.js") },
+        },
+      },
     },
-    plugins: ["@typescript-eslint"],
-    rules: {},
-    settings: {
-        "import/resolver": "webpack",
-    },
+  ],
 };

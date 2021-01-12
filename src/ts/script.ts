@@ -1,8 +1,8 @@
 import Sample from "~/lib/Sample";
 
-const name: string = "world";
+const name = "world";
 
-let hoge = "hogehoge";
+const hoge = "hogehoge";
 
 const sample = new Sample(name);
 
