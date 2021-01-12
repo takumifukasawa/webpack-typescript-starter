@@ -30,8 +30,8 @@ module.exports = {
         ],
       },
       settings: {
-        // "import/resolver": "webpack",
         "import/resolver": {
+          // eslintの設定はcommonに書いてあるので、dev,prodではなくcommonを指定
           webpack: { config: path.join(__dirname, "webpack.common.js") },
         },
       },
