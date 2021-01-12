@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack serve --inline --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "serve": "browser-sync start --port 3000 --server public"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.13.0",
@@ -46,5 +47,8 @@
     "webpack-dev-server": "^3.11.1",
     "webpack-fix-style-only-entries": "^0.6.0",
     "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.13"
   }
 }
