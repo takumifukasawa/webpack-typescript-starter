@@ -1,4 +1,4 @@
-# webpack-typescrit-starter
+# webpack-typescript-starter
 
 Base project is [kayac-html5-starter](https://github.com/kayac/kayac-html5-starter).
 
@@ -12,12 +12,37 @@ Base project is [kayac-html5-starter](https://github.com/kayac/kayac-html5-start
 ## usage
 
 ```
-// install
+// install node modules
 $ npm i
 
 // dev
 $ npm run dev
 
-// prod
+// build
 $ npm run build
+
+// clean build files
+$ npm run clean
+```
+
+## editor setup
+
+### vscode
+
+1. Install `prettier - Code formatter` and `EsLint` extension.
+
+2. Add these settings to `settings.json`.
+
+(If does no exist `settings.json` yet, please create `settings.json` on project root.)
+
+```json
+{
+  ...
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  ...
+}
 ```
