@@ -5,8 +5,9 @@
   "author": "takumifukasawa",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "dev": "webpack serve --inline --open --config webpack.dev.js"
+    "dev": "webpack serve --inline --open --config webpack.dev.js",
+    "build": "npm run clean && webpack --config webpack.prod.js",
+    "clean": "rimraf ./public"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.0",
@@ -29,6 +30,7 @@
     "pug-loader": "^2.4.0",
     "read-config": "^2.0.0",
     "reset.css": "^2.0.2",
+    "rimraf": "^3.0.2",
     "sass-loader": "^10.1.0",
     "ts-loader": "^8.0.14",
     "typescript": "^4.1.3",

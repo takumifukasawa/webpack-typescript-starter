@@ -1,20 +1,17 @@
 body {
   color: red;
 }
-// // reset css
-// @import "../../node_modules/reset.css/reset.css";
-// 
-// // SASS
-// @import "variable";
-// @import "function";
-// @import "mixin";
-// 
-// // @keyframes
-// @import "keyframes";
-// 
-// // base style
-// @import "base";
-// 
-// // modules
-// @import "module/wrapper";
-// @import "module/sample-icon";
+// reset css
+@import "../../node_modules/reset.css/reset.css";
+
+// SASS
+@import "variable";
+@import "function";
+@import "mixin";
+
+// base style
+@import "base";
+
+// modules
+@import "module/wrapper";
+@import "module/index";

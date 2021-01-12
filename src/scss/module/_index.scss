@@ -1,0 +1,9 @@
+.thumbnail {
+    $w: 300px;
+    $h: 200px;
+    margin: 10px 0px;
+    width: $w;
+    height: $h;
+    background-image: image-url('sample.jpg');
+    background-repeat: no-repeat;
+}
