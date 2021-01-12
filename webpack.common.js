@@ -45,8 +45,13 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        loader: "ts-loader",
-        exclude: /(node_modules)/
+        use: {
+          loader: "ts-loader",
+          exclude: /(node_modules)/,
+          options: {
+            configFile: path.resolve(__dirname, 'tsconfig.json'),
+          },
+        }
       },
       {
         test: /\.pug$/,
@@ -101,7 +106,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.ts', '*'],
     alias: {
-      '@': path.join(__dirname, SRC, 'ts'),
+      '~': path.join(__dirname, SRC, 'ts'),
     }
   },
 
