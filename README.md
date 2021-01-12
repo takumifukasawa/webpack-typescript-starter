@@ -20,16 +20,16 @@ $ npm run dev
 
 // build
 $ npm run build
-
-// clean build files
-$ npm run clean
 ```
 
 ## editor setup
 
 ### vscode
 
-1. Install `prettier - Code formatter` and `EsLint` extension.
+1. Install extesions.
+
+- prettier - Code formatter
+- EsLint
 
 2. Add these settings to `settings.json`.
 
