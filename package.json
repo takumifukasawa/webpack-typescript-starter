@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack serve --inline --open --config webpack.dev.js",
-    "build": "npm run clean && webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.13.0",
