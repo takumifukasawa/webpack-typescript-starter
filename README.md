@@ -20,6 +20,9 @@ $ npm run dev
 
 // build
 $ npm run build
+
+// serve build files
+$ npm run serve
 ```
 
 ## editor setup
